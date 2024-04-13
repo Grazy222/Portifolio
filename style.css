@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans Old Persian", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+:root {
+    --cor-fundo: #301b89 ; /* Defina sua cor primária */
+    --cor-texto: #fffeff ; /* Defina sua cor secundária */
+    
+  }
+header{
+    height: 15vh;
+    padding: 4% 4%;
+    background-color:#2812f059;
+    border: #301b89 solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+/* Menu */
+.logo{
+   border-radius: 50%;
+   
+   
+}
+nav{
+    width: 74%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around ;
+
+   
+}
+ul{
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 20px;
+    color: #fffeff;
+    font-family: "Noto Sans Old Persian", sans-serif;
+}
+
+li a {
+    text-decoration: none;
+    padding: 0;
+}
+li:hover{
+    background-color:#feff00  ;
+}
+.paginaInicial{
+    width: 75%;
+    height: 80vh;
+    margin-left: 13%;
+    margin-top: 5%;
+    background-color: #301b89;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+/* Main */
+.containerInicial{
+    width: 75%;
+    height: 100%;
+    padding: 40px 4%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; */
+   
+}
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+div.imagem{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do contêiner */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para a transformação */
+    
+    
+}
+.minhaImagem:hover img {
+    transform: scale(1.2); /* Aumenta a imagem em 20% ao passar o mouse por cima */
+  }
+.minhaImagem{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    height: 50vh;
+    border-radius: 50%;
+    
+    
+}
+.conteudo{
+    /* height: 25vh; */
+    color: #fffeff;
+    /* display: flex;
+    flex-direction: column; */
+    
+
+}
+.apresentacao span{
+    width: 90%;
+    font-size: 2em;
+    color: #feff00;
+}
+
+.primeiroParagrafo{
+    padding-top: 20px;
+    font-size: 1em;
+}
+
+/* sobre mim */
+
+.mainSobre{
+    background-image: url("./assets/imagem-fundo.jpg ");
+    background-repeat: no-repeat;
+
+}
