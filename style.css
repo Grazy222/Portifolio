@@ -6,11 +6,7 @@
     font-weight: 400;
     font-style: normal;
 }
-:root {
-    --cor-fundo: #301b89 ; /* Defina sua cor primária */
-    --cor-texto: #fffeff ; /* Defina sua cor secundária */
-    
-  }
+
   body{
     background-image: url("./assets/fundo-alura.png");
     background-repeat: no-repeat;
@@ -34,41 +30,59 @@ header{
    
    
 }
-nav{
+nav.menu-desktop{
     display: flex;
     justify-content: space-around ;
 
 }
 
-ul{
+.ulDesktop{
     
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style-type: none;
 }
-li{
+
+li .sobre {  
     display: inline-block;
     font-weight: 400;
     font-style: normal;
-    margin-right: 20px;
-    
-
-}
-
-li .sobre {    
+    margin-right: 20px;  
     font-family: "Noto Sans Old Persian", sans-serif;
     color: #dec1e4;
     text-decoration: none;
     padding: 0;
+    
 }
 li:hover{
     background-color:#ffff008c  ;
 }
-.menu{
-    list-style: none;
+
+/*------- MENU MOBILE------- */
+
+nav.menu-mobile nav{
+   
+    
 }
 
+
+.menu-mobile{
+     display: none;
+    
+}
+.menu-mobile nav ul{
+    text-align: right;
+}
+.menu-mobile nav ul li a{
+    color: #9f8eeb;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 4%;
+}
+.menu-mobile nav ul li a:hover{
+    background-color: blue;
+}
 
 /* Main Pagina Inicial */
 main .paginaInicial{
@@ -115,7 +129,7 @@ div.imagem{
     }
 }
 .conteudo{
-    width: 56%;
+    /* width: 56%; */
     height: 51vh;
     color:#fffeff;
     display: flex;
@@ -206,6 +220,7 @@ section.containerSobre{
     padding: 0% 3% 0% 3%;
 }
 /* SEGUNDA SECTION -------Skill------ */
+
 section.portifolio{
     height: 100vh;
     padding: 80px 4%;
@@ -232,10 +247,7 @@ div.img-port{
     position: relative;
 
 }
-div.interface{
-    /* height: 100%; */
-    
-}
+
 
 h2.tituloProjetos{
     text-align: center;
@@ -274,6 +286,7 @@ div.flex{
 .overlay:hover{
     opacity: 1;
 }
+
 /* ----SESSÃO DE ESTILO CONTATO ---*/
 
 section.formulario{
@@ -290,6 +303,7 @@ form{
     gap: 10px;
     margin-top: 40px;
 }
+
 form input, form textarea{
     width: 100%;
     background-color: #152225a9;
@@ -354,7 +368,7 @@ div.logo-footer{
 }
 
 .borda{
-    border-top: 2px solid #feff00 ;
+    border-top: 2px solid #ffff00 ;
 }
 div.line-footer a{
     color:#fffeff;
@@ -375,32 +389,141 @@ div.btn-social img{
 }
 @media screen and (max-width:1020px) {
     body{
-        background-position:right;
-        background-size: contain;
+        background-color: #301b89;
+        background-image: none;
+        
     }
-    header{
-        height: 30vh;
+    nav.menu-desktop{
+        list-style: none;
     }
+
+    nav{
+        width: 50%;
+        height: 50vh;
+        display: flex;
+        
+    }
+    nav.menu-desktop{
+        display: none;
+    }
+    ul{
+        width: 50%;
+        list-style-type: none;
+    }
+    li{
+        font-size: 15px;
+    }
+    
+    div.menu-mobile{
+        width: 53%;
+        /* height: 63vh; */
+        display: flex;
+        align-content:space-between ;
+        flex-direction: column;
+
+
+
+    }
+    .menu-mobile{
+        background-color: #feff00;
+        height: 98vh;
+        width: 70%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+    }
+    .menu-mobile nav ul{
+        width: 100%;
+        
+    }
+    div.btn-fechar,.close{
+        width: 30%;
+        height: 20%;
+        
+         
+        
+    }
+
+    .containerInicial{
+        width: 92%;
+        margin-left: 5%;
+        flex-direction: column;
+    }
+
     h2.apresentacao{
         font-size: 14px;
     }
+    .minhaimagem{
+        width: 18%;
+    }
+    .conteudo{
+       
+        justify-content: center;
+    }
     .primeiroParagrafo{
         font-size: 14px;
-        line-height: 30px;
+        width: 91%;
 
     }
     .logo{
         width: 10%;
         margin-right: auto;
     }
-    div.imagem{
-        height: 84;
+    img.minhaImagem{
+        
+        height: 68%;
+        width: 98%;
     }
-    .flex{
-        flex-direction: row-reverse;
-    }
-    nav{
+    .logo-footer{
         display: none;
+        
     }
     
+    .finalidade{
+        width: 97%;
+        font-size: 10px;
+    }
+    section.portifolio{
+       padding: 0;
+        
+    }
+    h2.tituloProjetos{
+        font-size: 24px;
+    }
+    /* div.flex{
+        height: 74vh;
+        flex-direction: column;
+        
+    } */
+    div.img-port{
+        width: 64%;
+        height: 29%;
+    }
+    
+    form{
+        margin-top: 10px;
+    }
+    form input{
+        width: 94%;
+        font-size: 13px;
+    }
+    div.line-footer{
+        padding: 7px;
+        display: flex;
+        justify-content: center;
+        
+    }
+    footer{
+        border: none;
+
+    }
+   
+
+    div.interface{
+        padding: 8px 4%;
+    }
+    div.line-footer.borda{
+        font-size: 15px;
+    }
 }
